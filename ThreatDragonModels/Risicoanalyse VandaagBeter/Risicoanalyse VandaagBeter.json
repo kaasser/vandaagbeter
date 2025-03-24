@@ -1301,13 +1301,14 @@
                 "text": "FortiGate 6300F"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -1391,19 +1392,40 @@
               ]
             },
             "id": "569442c0-12a9-4a67-9134-2c2fe70a6a8f",
-            "zIndex": 1,
             "data": {
               "type": "tm.Process",
               "name": "FortiGate 6300F",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "6056b056-fdee-49e2-80d7-7d7db6f891d4",
+                  "title": "Onbevoegde toegang tot firewallbeheer",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "Onbevoegde toegang tot firewallbeheer",
+                  "mitigation": "Alleen intern toegang geven (ACL)\nSterke wachtwoorden + 2FA\nLogging + monitoring",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": "7"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 1
+              }
             }
           },
           {
@@ -1427,6 +1449,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -1510,7 +1533,6 @@
               ]
             },
             "id": "841dbb14-a4f1-4cf8-b8a8-c0546ec1dc80",
-            "zIndex": 2,
             "data": {
               "type": "tm.Process",
               "name": "Switch ",
@@ -1539,13 +1561,14 @@
                 "text": "Server 2016"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -1629,19 +1652,40 @@
               ]
             },
             "id": "2c381d53-02db-4d80-94df-34dd5e645a35",
-            "zIndex": 3,
             "data": {
               "type": "tm.Process",
               "name": "Server 2016",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "a2c642a9-7737-4b00-9a39-9e5f8ae51689",
+                  "title": "Manipulatie van AD-objecten door geïnfecteerde client",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Een geïnfecteerde thin client kan via een sessie wijzigingen aanbrengen in AD-objecten (gebruikers, groepen) als die rechten niet goed zijn beperkt.",
+                  "mitigation": "Least privilege toepassen\nAudit logging activeren\nGPO's afdwingen voor clients",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": "6"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -1658,13 +1702,14 @@
                 "text": "Wifi Medewerkers "
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -1748,19 +1793,40 @@
               ]
             },
             "id": "9e286c37-fcf2-4281-b8e3-f42f7be746d3",
-            "zIndex": 4,
             "data": {
               "type": "tm.Process",
               "name": "Wifi Medewerkers ",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "3ebfcaa5-e335-4cf8-b7bb-8aafe2d93957",
+                  "title": "Onbeveiligde overdracht van gevoelige patiëntgegevens",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Information disclosure",
+                  "description": "Als het Wifi-netwerk voor medewerkers onvoldoende is beveiligd (geen WPA2/3 of versleuteling), kunnen aanvallers communicatie onderscheppen, inclusief patiëntinformatie.",
+                  "mitigation": "WPA3 verplicht stellen\nVersleutelde communicatie (HTTPS, VPN)\nNetwerkverkeer monitoren",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": "8"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -1777,16 +1843,19 @@
                 "text": "File Server"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 5,
             "ports": {
               "groups": {
                 "top": {
@@ -1870,20 +1939,39 @@
               ]
             },
             "id": "034f91a7-e2ef-44cd-8af1-8cf5f831d6d9",
-            "zIndex": 5,
             "data": {
               "type": "tm.Store",
               "name": "File Server",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "62986d4c-c6aa-4860-99ed-0e9d48c08c6b",
+                  "title": "Onbeveiligde opslag van gevoelige documenten",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Information disclosure",
+                  "description": "Medische gegevens op de fileserver zijn niet versleuteld en kunnen gelezen worden bij een lek of fysieke toegang.",
+                  "mitigation": "Encryptie op schijf- en bestandsniveau\nToegangsrechten beperken (RBAC)\nMonitoring op bestandsactiviteiten",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": "9"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             }
           },
           {
@@ -1900,16 +1988,19 @@
                 "text": "OT-apparatuur"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 6,
             "ports": {
               "groups": {
                 "top": {
@@ -1993,20 +2084,39 @@
               ]
             },
             "id": "7cb476af-4fe2-4194-97a4-947f1ac951d3",
-            "zIndex": 6,
             "data": {
               "type": "tm.Store",
               "name": "OT-apparatuur",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "d6fdb42c-8915-418c-ab80-c904d992e170",
+                  "title": "Verstoring van medische apparatuur door netwerkverkeer",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "OT-apparaten communiceren via TCP zonder veel beveiliging. Een aanvaller binnen het netwerk kan met verkeer of scans de apparaten verstoren of overbelasten.",
+                  "mitigation": "Scheiding van OT- en IT-netwerken (VLAN)\nWhitelisting van IP’s\nMonitoring op verkeer naar OT-segment",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": "8"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1
+              }
             }
           },
           {
@@ -2030,6 +2140,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 7,
             "ports": {
               "groups": {
                 "top": {
@@ -2113,7 +2224,6 @@
               ]
             },
             "id": "3af4e343-f0bc-433c-8312-a28dd2274f5e",
-            "zIndex": 7,
             "data": {
               "type": "tm.Actor",
               "name": "Medewerkers",
@@ -2146,6 +2256,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 8,
             "ports": {
               "groups": {
                 "top": {
@@ -2229,7 +2340,6 @@
               ]
             },
             "id": "5608cbe8-19e2-4a01-8ab4-257e275ca8c4",
-            "zIndex": 8,
             "data": {
               "type": "tm.Actor",
               "name": "Gasten",
@@ -2255,13 +2365,14 @@
                 "text": "Azure AD"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 9,
             "ports": {
               "groups": {
                 "top": {
@@ -2345,16 +2456,33 @@
               ]
             },
             "id": "b09e2dcb-830b-4f31-a2d3-56bcdba6a96a",
-            "zIndex": 9,
             "data": {
               "type": "tm.Actor",
               "name": "Azure AD",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "cb50d336-91d1-4abc-a747-b4069a721cc4",
+                  "title": "Phishing-aanvallen op Microsoft 365 accounts",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Spoofing",
+                  "description": "Aanvallers kunnen via phishing toegang krijgen tot Microsoft 365-accounts en zo toegang tot AD en mail krijgen.",
+                  "mitigation": "MFA verplicht stellen\nAwareness training personeel\nSPF/DKIM/DMARC correct instellen",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 7,
+                  "score": "9"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
             }
           },
           {
@@ -2813,13 +2941,14 @@
                 "text": "Wifi Gasten"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 11,
             "ports": {
               "groups": {
                 "top": {
@@ -2903,19 +3032,40 @@
               ]
             },
             "id": "381df54d-2ba6-49f6-8e43-fa9153673daf",
-            "zIndex": 11,
             "data": {
               "type": "tm.Process",
               "name": "Wifi Gasten",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "9cfea064-8493-4138-aad1-25b3b1620412",
+                  "title": "Spoofing van het gastennetwerk door kwaadwillende gebruiker",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Een aanvaller kan zich voordoen als het Wifi Gasten netwerk door een nep-accesspoint te creëren (bijvoorbeeld via een \"Evil Twin\"-aanval). Hierdoor kunnen gebruikers onbewust verbinding maken met het nep-netwerk en gevoelige informatie zoals inloggegevens of medische portals prijsgeven.",
+                  "mitigation": "Segmenteer het gastenverkeer strikt van het interne netwerk (geen toegang tot interne systemen).\nGebruik netwerkisolatie (bijv. VLAN’s).\nVoeg een captive portal toe voor gastverificatie.\nGebruik Wireless Intrusion Detection Systems (WIDS) om nep-accesspoints te detecteren.\nPlaats waarschuwingen voor gasten: “Verbind alleen met officieel netwerk 'VandaagBeter_Gast'.”",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": "7"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -2939,6 +3089,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 12,
             "ports": {
               "groups": {
                 "top": {
@@ -3022,7 +3173,6 @@
               ]
             },
             "id": "af596838-1f57-49cb-a8d0-eb5368b014a0",
-            "zIndex": 12,
             "data": {
               "type": "tm.Actor",
               "name": "Internet",
@@ -3039,6 +3189,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "Docent",
-    "threatTop": 0
+    "threatTop": 7
   }
 }
