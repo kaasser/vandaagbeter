@@ -1,0 +1,26 @@
+{
+  "version": "2.4.1",
+  "summary": {
+    "title": "Risicoanalyse VandaagBeter",
+    "owner": "Berat Akkaya, Klaas de Waard",
+    "description": "Zorginstelling VandaagBeter heeft meerdere vestigingen verbonden via een glasvezel KPN WAN-netwerk. Elke locatie bevat lokale servers, OT-apparatuur en thin clients. De netwerkinfrastructuur wordt deels beheerd vanuit Wormerveer met een FortiGate firewall en Azure-koppeling. Het model analyseert risico’s binnen deze infrastructuur.",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "Netwerktopologie VandaagBeter",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.4.1",
+        "cells": []
+      }
+    ],
+    "diagramTop": 1,
+    "reviewer": "Docent",
+    "threatTop": 0
+  }
+}
