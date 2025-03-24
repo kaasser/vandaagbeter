@@ -1278,9 +1278,18 @@
             }
           }
         ]
+      },
+      {
+        "id": 1,
+        "title": "Vestiging Wormerveer",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.4.1",
+        "cells": []
       }
     ],
-    "diagramTop": 1,
+    "diagramTop": 2,
     "reviewer": "Docent",
     "threatTop": 0
   }
