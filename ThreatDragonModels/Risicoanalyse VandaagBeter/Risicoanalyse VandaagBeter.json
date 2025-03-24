@@ -38,6 +38,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -121,7 +122,6 @@
               ]
             },
             "id": "b2f29ee9-c1ca-4996-a488-c89f3ae86f79",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
               "name": "Internet",
@@ -154,6 +154,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -237,7 +238,6 @@
               ]
             },
             "id": "f43a4838-e20a-4959-9270-8e5a0a536f02",
-            "zIndex": 3,
             "data": {
               "type": "tm.Process",
               "name": "FortiGate 6300F",
@@ -251,9 +251,7 @@
               "privilegeLevel": "",
               "threats": []
             },
-            "children": [
-              "48c1108c-8ea5-42e6-9f6f-1ed5eb64c171"
-            ]
+            "children": []
           },
           {
             "position": {
@@ -276,6 +274,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -359,7 +358,6 @@
               ]
             },
             "id": "91bb4b5e-1001-4bbd-99cb-14b9937377d9",
-            "zIndex": 4,
             "data": {
               "type": "tm.Process",
               "name": "KPN WAN",
@@ -395,6 +393,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 5,
             "ports": {
               "groups": {
                 "top": {
@@ -478,7 +477,6 @@
               ]
             },
             "id": "d55ed748-978d-41f5-8f66-26233ab72496",
-            "zIndex": 5,
             "data": {
               "type": "tm.Process",
               "name": "Edge Router Zaandam",
@@ -514,6 +512,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 6,
             "ports": {
               "groups": {
                 "top": {
@@ -597,7 +596,6 @@
               ]
             },
             "id": "a41ad283-0d45-4ccf-b5ff-25a1afc96e7a",
-            "zIndex": 6,
             "data": {
               "type": "tm.Process",
               "name": "Edge Router Wormerveer",
@@ -611,95 +609,6 @@
               "privilegeLevel": "",
               "threats": []
             }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Data Flow"
-            ],
-            "id": "0daacee3-2745-4e01-ba7e-68d8013e3a09",
-            "source": {
-              "x": 320,
-              "y": 110
-            },
-            "target": {
-              "cell": "f43a4838-e20a-4959-9270-8e5a0a536f02",
-              "port": "f18b226f-5a4c-4bc4-b85e-d080cc91b3f2"
-            }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Data Flow"
-            ],
-            "id": "e6b45de3-dcd2-47c6-9f39-2b18bd8d570d",
-            "source": {
-              "x": 530,
-              "y": 110
-            },
-            "target": {
-              "cell": "91bb4b5e-1001-4bbd-99cb-14b9937377d9",
-              "port": "f18b226f-5a4c-4bc4-b85e-d080cc91b3f2"
-            },
-            "vertices": []
           },
           {
             "shape": "flow",
@@ -941,7 +850,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -953,19 +862,63 @@
               "threats": []
             },
             "labels": [
-              "Data Flow"
+              ""
             ],
-            "id": "48c1108c-8ea5-42e6-9f6f-1ed5eb64c171",
+            "id": "0daacee3-2745-4e01-ba7e-68d8013e3a09",
             "source": {
-              "cell": "f43a4838-e20a-4959-9270-8e5a0a536f02",
-              "port": "f18b226f-5a4c-4bc4-b85e-d080cc91b3f2"
+              "x": 320,
+              "y": 110
             },
             "target": {
               "cell": "f43a4838-e20a-4959-9270-8e5a0a536f02",
               "port": "f18b226f-5a4c-4bc4-b85e-d080cc91b3f2"
             },
-            "vertices": [],
-            "parent": "f43a4838-e20a-4959-9270-8e5a0a536f02"
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              ""
+            ],
+            "id": "e6b45de3-dcd2-47c6-9f39-2b18bd8d570d",
+            "source": {
+              "x": 530,
+              "y": 110
+            },
+            "target": {
+              "cell": "91bb4b5e-1001-4bbd-99cb-14b9937377d9",
+              "port": "f18b226f-5a4c-4bc4-b85e-d080cc91b3f2"
+            },
+            "vertices": []
           },
           {
             "position": {
@@ -988,6 +941,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 11,
             "ports": {
               "groups": {
                 "top": {
@@ -1071,7 +1025,6 @@
               ]
             },
             "id": "d7e79d26-467c-469a-8aae-e9a738e86d6c",
-            "zIndex": 11,
             "data": {
               "type": "tm.Process",
               "name": "Edge Router Amsterdam",
@@ -1107,6 +1060,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 12,
             "ports": {
               "groups": {
                 "top": {
@@ -1190,7 +1144,6 @@
               ]
             },
             "id": "50fa7055-9c07-4dc7-a64d-eb2952d8324b",
-            "zIndex": 12,
             "data": {
               "type": "tm.Process",
               "name": "Edge Router Purmerend",
@@ -1226,6 +1179,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 13,
             "ports": {
               "groups": {
                 "top": {
@@ -1309,7 +1263,6 @@
               ]
             },
             "id": "eb487335-d6fc-4fdf-b631-fdbb722accd6",
-            "zIndex": 13,
             "data": {
               "type": "tm.Process",
               "name": "Edge Router Heiloo",
